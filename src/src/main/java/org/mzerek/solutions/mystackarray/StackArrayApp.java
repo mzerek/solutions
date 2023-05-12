@@ -86,7 +86,7 @@ class StosImpl implements Stos {
 public class StackArrayApp {
 
     public static void main(String[] args) {
-/*        Stos stos = new StosImpl();
+       Stos stos = new StosImpl();
         stos.addFirst(3);
         stos.displayStos();
         stos.addFirst(2);
@@ -107,19 +107,19 @@ public class StackArrayApp {
         System.out.println("Ostatni: " + stos.peekLast());
 
         stos.displayStos();
-        */
+
 
 
         //JUnitCore.main("Solution");
 
-
+/*
         Result result = JUnitCore.runClasses(StackArrayApp.class);
 
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
 
-        System.out.println(result.wasSuccessful());
+        System.out.println(result.wasSuccessful());*/
     }
 
     @Test

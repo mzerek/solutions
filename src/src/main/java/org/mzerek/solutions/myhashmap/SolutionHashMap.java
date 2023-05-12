@@ -3,24 +3,20 @@ package org.mzerek.solutions.myhashmap;
 //https://www.turing.com/kb/implementing-hashmap-in-java
 class MyHashMap<K, V> {
     private final static int DEFAULT_CAPACITY = 16;
-    private final static float DEFAULT_LOAD_FACTOR = 0.75f;
-
 
     private int capacity;
-    private float loadFactor;
 
     private int size;
 
     private Node<K, V>[] table;
 
     public MyHashMap() {
-        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
+        this(DEFAULT_CAPACITY);
     }
 
     @SuppressWarnings("unchecked")
-    public MyHashMap(int capacity, float loadFactor) {
+    public MyHashMap(int capacity) {
         this.capacity = capacity;
-        this.loadFactor = loadFactor;
         this.table = new Node[DEFAULT_CAPACITY];
     }
 
@@ -56,7 +52,7 @@ class MyHashMap<K, V> {
         newNode.next = table[index];
         table[index] = newNode;
         size++;
-        if (size > capacity * loadFactor) {
+        if (size > capacity) {
             resize();
         }
     }
