@@ -10,4 +10,5 @@ Rekrutacja programy:
 27. Can you write a threadsafe singleton in java
 26. Obliczanie śniegu zamkniętego w szczelinach górskich
 28. Given two integers ‘n’ and ‘m’, find all the stepping numbers in range [n, m]
+29. Implement method findFirstNonRepeatChar(String input) 
 ```
