@@ -13,6 +13,13 @@ public class SolutionPower {
         return power;
     }
 
+    public static long powerRec(int x, int n) {
+        if(n==0) {
+            return 1;
+        }
+        return x * powerRec(x, --n);
+    }
+
     public static void main(String[] arg) {
 
         long one = power(2, 2);
@@ -22,5 +29,13 @@ public class SolutionPower {
         System.out.println(one);
         System.out.println(two);
         System.out.println(three);
+
+        long oneRec = powerRec(2, 2);
+        long twoRec = powerRec(3, 2);
+        long threeRec = powerRec(12, 4);
+
+        System.out.println(oneRec);
+        System.out.println(twoRec);
+        System.out.println(threeRec);
     }
 }
