@@ -1,9 +1,6 @@
-package org.mzerek.solutions.mystackarray;
+package org.mzerek.solutions.mystackimpl.mystackarray;
 
 import org.junit.*;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
 import java.util.Arrays;
 

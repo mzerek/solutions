@@ -1,4 +1,4 @@
-package org.mzerek.solutions.mystacklist;
+package org.mzerek.solutions.mystackimpl.mystacklist;
 
 import java.util.Arrays;
 import java.util.LinkedList;
