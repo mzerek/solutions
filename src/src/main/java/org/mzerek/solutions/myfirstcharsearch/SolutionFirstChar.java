@@ -1,4 +1,4 @@
-package org.mzerek.solutions.mystrichrepeater;
+package org.mzerek.solutions.myfirstcharsearch;
 
 public class SolutionFirstChar {
 

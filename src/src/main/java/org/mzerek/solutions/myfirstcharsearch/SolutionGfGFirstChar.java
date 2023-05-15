@@ -1,4 +1,4 @@
-package org.mzerek.solutions.mystrichrepeater;
+package org.mzerek.solutions.myfirstcharsearch;
 
 //https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-character/amp/
 public class SolutionGfGFirstChar {
