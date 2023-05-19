@@ -12,6 +12,7 @@ Rekrutacja programy:
 11. Finding the second largest value in the table
 14. Missing characters to make a string Pangram
 15. Students with maximum average score
+18. Count trailing zeroes in factorial of a number
 27. Can you write a threadsafe singleton in java
 26. Obliczanie śniegu zamkniętego w szczelinach górskich
 28. Given two integers ‘n’ and ‘m’, find all the stepping numbers in range [n, m]
