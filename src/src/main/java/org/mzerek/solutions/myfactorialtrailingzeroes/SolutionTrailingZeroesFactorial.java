@@ -1,4 +1,4 @@
-package org.mzerek.solutions.factorialtrailingzeroes;
+package org.mzerek.solutions.myfactorialtrailingzeroes;
 
 import java.math.BigInteger;
 
