@@ -10,6 +10,7 @@ Rekrutacja programy:
 8. Find the number of pairs which values add up to the specified value
 9. There is a list of strings: task is to create a set of sets, with the same anagram (‘dog’ i ‘God’ would be the same, as alphabetically sorted anagram is ‘dgo’)
 11. Finding the second largest value in the table
+12. Parsing Apache access log in Java - serach IP
 14. Missing characters to make a string Pangram
 15. Students with maximum average score
 18. Count trailing zeroes in factorial of a number

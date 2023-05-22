@@ -42,11 +42,6 @@ public class SolutionTrailingZeroesFactorial {
         return counter;
     }
 
-
-
-
-
-
     public static BigInteger factorialExample(BigInteger number) {
 
         BigInteger factorial = BigInteger.valueOf(1);
