@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class SolutionMinWordDist {
 
     public static void main(String[] args) {
-        String s = "geeks for geeks contribute practice";
+        String s = "geeks for geeks contribute for practice practice";
         String w1 = "geeks";
         String w2 = "practice";
         System.out.println(findWordDistance(s, w1, w2));
@@ -20,7 +20,6 @@ public class SolutionMinWordDist {
 
         String[] wordArray = phrase.split(" ");
         int arrayLength = wordArray.length;
-        int minimalDistance = arrayLength + 1;
 
         int firstWordIndex = 0;
         for (int i = 0; i < arrayLength; i++) {
@@ -30,7 +29,7 @@ public class SolutionMinWordDist {
         }
 
         int secondWordIndex = 0;
-        for (int i = 0; i < minimalDistance; i++) {
+        for (int i = 0; i < arrayLength; i++) {
             if (wordArray[i].equals(wTwo)) {
                 secondWordIndex = i;
                 break;
