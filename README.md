@@ -16,6 +16,7 @@ Rekrutacja programy:
 16.Queries to check if a number lies in N ranges of L-R
 18. Count trailing zeroes in factorial of a number
 19. Move all zeroes to end of array
+20. Problem: znajdź najmniejszy odstęp między dwoma wyrazami w tekście
 27. Can you write a threadsafe singleton in java
 26. Obliczanie śniegu zamkniętego w szczelinach górskich
 28. Given two integers ‘n’ and ‘m’, find all the stepping numbers in range [n, m]
