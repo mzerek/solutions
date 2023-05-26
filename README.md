@@ -21,4 +21,5 @@ Rekrutacja programy:
 26. Obliczanie śniegu zamkniętego w szczelinach górskich
 28. Given two integers ‘n’ and ‘m’, find all the stepping numbers in range [n, m]
 29 (13). Implement method findFirstNonRepeatChar(String input) 
+30. Search best way
 ```
