@@ -1,2 +1,0 @@
-https://github.com/settings/tokens
-git remote set-url origin https://[token]@github.com/mzerek/solutions.git

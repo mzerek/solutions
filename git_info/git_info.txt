@@ -1,0 +1,6 @@
+https://github.com/settings/tokens
+git remote set-url origin https://[token]@github.com/mzerek/solutions.git
+
+
+https://docs.github.com/en/get-started/git-basics/associating-text-editors-with-git
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
