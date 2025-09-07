@@ -1,7 +1,7 @@
 ```
-Pomoc w przygotowoaniu do rozmowy kwalifikacyjnej
+Helper:
 
 01. Java threads
-02. ...
+02. FizzBuzz
 
 ```
