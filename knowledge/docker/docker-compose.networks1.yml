@@ -1,0 +1,23 @@
+services:
+    app:
+        image: alpine:latest
+        tty: true
+        networks:
+            - forntend
+    
+    backend:
+        image: alpine:latest
+        tty: true
+        networks:
+            - forntend
+            - backend
+    db:
+        image: alpine:latest
+        tty: true
+        networks:
+            - backend
+       
+networks:
+    forntend:
+    backend:
+        

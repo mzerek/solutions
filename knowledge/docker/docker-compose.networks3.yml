@@ -1,0 +1,26 @@
+services:
+    app:
+        image: alpine:latest
+        tty: true
+        networks:
+            - FENet
+    
+    backend:
+        image: alpine:latest
+        tty: true
+        networks:
+            - FENet
+            - BENet
+    db:
+        image: alpine:latest
+        tty: true
+        networks:
+            - BENet
+       
+networks:
+    FENet:
+        external: true
+   
+    BENet:
+        external: true
+        

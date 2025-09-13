@@ -1,0 +1,106 @@
+CNM - Container Network Model - jak kontenery mogą się ze sobą komunikować:
+1. Network Sandbox (odizolowane środowisko z konfiguracją kontenera: IP, tablica routingu, DNS)
+2. Endpoint
+3. Sieci (Bridge, Host, Overlay, None)
+
+CNI - Container Network Interface - CNCF (Cloud Native Computing Foundation) - standard dla sieci kontenerów
+
+=====================================================
+
+1. wylistowanie sieci:
+docker network ls 
+
+2. wylistowanie kontenerów:
+docker ps -a
+
+3. szczegóły kontenera:
+docker inspect <nazwa_kontenera>
+
+4. tworzenie sieci z typem sieci (domyślnie bez -d jest bridge):
+docker network create -d bridge <network_name>
+
+5. twarde ubicie kontenerów (nie zalecane):
+docker rm $(docker ps -a -q) --force
+
+6. tworzenie kontenera z obrazu alpine (-d w tle):
+docker run -it --name <nazwa_kontenera> -d alpine
+
+7. podpięcie się do kontenera:
+docker exec -it <nazwa_kontenera> sh (shell sh lub bash bsh)
+
+winpty docker exec -it <nazwa_kontenera> sh (shell sh lub bash bsh) -> dla git bash w windows (alias docker="winpty docker")
+
+8. Podłączenie sieci do kontenera:
+docker network connect <nazwa_sieci> <nazwa_kontenera>
+
+docker network disconnect <nazwa_sieci> <nazwa_kontenera>
+
+9. Wyciąganie fragmentu z response po inspect:
+docker inspect <nazwa_kontenera> | grep \"IPAddress\"
+
+=====================================================
+
+10. tworzenie kontenera z przekierowanym portem (nginx):
+docker run --name <nazwa_kontenera> -p 8081:80 nginx
+
+=====================================================
+
+- Kontenery są efemeryczne
+- Dla danych volume lub bind mount
+
+11. Uruchomienie kontenera alpine (bez -d odrazu się łączy z sh):
+docker run -it --name my-container alpine
+
+12. Start kontenera:
+docker start my-container
+
+13. Stopowanie kontenera:
+docker stop my-container
+
+14. Usuwannie kontenera:
+docker rm my-container
+docker rm -f my-container (usuwa bez zatrzymania)
+
+15. Lista volumenów:
+docker volume ls
+
+16. Podpinanie volumenu do contenera z obrazu alpine:
+docker run -d -it --name=my-container -v my-volume:/data alpine
+
+17. Usuwanie volumenu (jeśli nie jest podpięty):
+docker volume rm my-volume
+
+18. Usuwanie wszystkich nie używanych volumenów:
+docker volume prune
+
+19. Bindowanie volumenów:
+docker run -d -it --name my-node-app -v ./:/app -w /app node:21
+
+docker run -d -it --name my-node-app -v ${pwd}:/app -w /app node:21
+
+docker run -d -it --name my-node-app -v ./app:/app -w /app --user 1000:1000 node:21
+
+docker run -d -it --name my-node-app -v ./app:/app -w /app --user $(id -u):$(id -g) node:21 
+(app musi już istnieć dopiero podajemy usera)
+
+=====================================================
+
+20. Uruchamianie docker compose z siciami:
+docker compose -f docker-compose.networks1.yml up -d
+
+21. Podłącznie do serwisu/kontenera:
+docker compose -f docker-compose.networks1.yml exec -it app sh
+albo tak
+docker exec -it docker-app-1 sh
+
+22. Opcja z utworzonymi sieciami (pozbycie się prefixu) ale deprcated: 
+docker network create FENet
+docker network create BENet
+docker compose -f docker-compose.networks2.yml up -d
+
+23. Opcja z utworzonymi sieciami (pozbycie się prefixu) bez deprecated: 
+docker network create FENet
+docker network create BENet
+docker compose -f docker-compose.networks3.yml up -d
+
+=====================================================
