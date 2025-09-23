@@ -1,4 +1,4 @@
-package main.java.org.mzerek.solutions.algorithms_03.fizzbuzz_02;
+package main.java.org.mzerek.solutions.algorithms_03.fizzbuzz;
 
 /*
 https://stormit.pl/fizzbuzz/
