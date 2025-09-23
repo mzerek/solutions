@@ -2,6 +2,7 @@
 Helper:
 
 01. Java threads
-02. FizzBuzz
+02. Patterns
+03. Alhorithms
 
 ```

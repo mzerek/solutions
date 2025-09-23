@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import static main.java.org.mzerek.solutions.javathreads_01.DelayUtils.delay;
+import static main.java.org.mzerek.solutions.javathreads_01.DelayUtils.delaySecond;
 
 
 /*
@@ -15,7 +15,7 @@ public class CompletableFutureExampleV3 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         CompletableFuture<Integer> calc1 = CompletableFuture.supplyAsync(() -> {
             System.out.println("Calculation #1 in progress");
-            delay(4);
+            delaySecond(4);
             int result = (new Random()).nextInt(1000);
             System.out.println("Calc1 result is " + result);
             return result;
@@ -23,7 +23,7 @@ public class CompletableFutureExampleV3 {
 
         CompletableFuture<Integer> calc2 = CompletableFuture.supplyAsync(() -> {
             System.out.println("Calculation #2 in progress");
-            delay(1);
+            delaySecond(1);
             int result = (new Random()).nextInt(10);
             System.out.println("Calc2 result is " + result);
             return result;

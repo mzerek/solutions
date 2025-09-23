@@ -104,3 +104,6 @@ docker network create BENet
 docker compose -f docker-compose.networks3.yml up -d
 
 =====================================================
+
+24. Odpalenie konsoli kontenera w bash:
+docker compose -f docker-compose.ports2.yml exec -it web bash

@@ -3,7 +3,7 @@ package main.java.org.mzerek.solutions.javathreads_01.completablefuture;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import static main.java.org.mzerek.solutions.javathreads_01.DelayUtils.delay;
+import static main.java.org.mzerek.solutions.javathreads_01.DelayUtils.delaySecond;
 
 
 /*
@@ -18,7 +18,7 @@ public class CompletableFutureExample {
 
         while(!futureOrder.isDone()){
             System.out.println("Doing something else");
-            delay(1);
+            delaySecond(1);
         }
 
         String result = futureOrder.get();

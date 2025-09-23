@@ -1,4 +1,4 @@
-package main.java.org.mzerek.solutions.fizzbuzz_02;
+package main.java.org.mzerek.solutions.algorithms_03.fizzbuzz_02;
 
 import java.util.Arrays;
 import java.util.function.IntUnaryOperator;

@@ -1,0 +1,18 @@
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - 8080:80
+        volumes:
+            - ./:/usr/share/nginx/html
+
+    db:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+        volumes:
+            - db_data:/var/lib/mysql
+       
+volumes:
+    db_data:
+        

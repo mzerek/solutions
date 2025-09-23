@@ -1,0 +1,20 @@
+# command change to docker compose
+# docker run -d -it --name my-node-app1 -v $(pwd)/app:/app --user $(id -u):$(id -g) -p 3000:3000 -w /app node:21
+
+#USER_ID=$(id -u) GROUP_ID=$(id -g) docker compose -f docker-compose.ports2.yml up -d
+#docker compose -f docker-compose.ports2.yml exec -it app bash
+
+services:
+    app:
+        image: node:22
+        build:
+            context: .
+            dockerfile: Dockerfile.next
+        ports:
+            - 3000:3000
+        user: "${USER_ID}:${GROUP_ID}"
+        tty: true
+        volumes:
+            - ./app/my-app:/app
+        working_dir: /app
+        
