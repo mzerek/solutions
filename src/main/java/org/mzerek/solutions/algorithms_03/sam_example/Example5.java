@@ -31,13 +31,6 @@ public class Example5 {
     public static int returnMax(int[] A) {
         List<Integer> mainList = Arrays.stream(A).boxed().toList();
 
-        //List<Integer> mainList = new ArrayList<>();
-        //for(int i=0; i<A.length; i++){
-        //mainList.add(A[i]);
-        //}
-
-        int listSize = mainList.size();
-
         Integer maxListVal = Collections.max(mainList);
         //System.out.println("Max: " + maxListVal);
         if (maxListVal < 0) {
