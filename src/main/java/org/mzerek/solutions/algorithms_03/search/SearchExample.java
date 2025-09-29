@@ -1,5 +1,6 @@
 package main.java.org.mzerek.solutions.algorithms_03.search;
 
+//O(n)
 public class SearchExample {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 3, 8, 9};
