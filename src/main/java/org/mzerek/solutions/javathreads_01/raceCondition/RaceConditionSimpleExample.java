@@ -25,6 +25,9 @@ public class RaceConditionSimpleExample {
             }
         });
 
+        t1.setName("T1");
+        t2.setName("T2");
+
         t1.start(); // Start pierwszego wątku
         t2.start(); // Start drugiego wątku
 
@@ -44,7 +47,10 @@ public class RaceConditionSimpleExample {
     //private synchronized static void incrementCounter() {
     private static void incrementCounter() {
         // Tutaj występuje warunek wyścigu
+        //System.out.println("incrementCounter Thread name: " + Thread.currentThread().getName());
         counter++;
-        atomicInteger.addAndGet(+1);
+        atomicInteger.addAndGet(1);
+        //System.out.println("incrementCounter counter: " + counter);
+        //System.out.println("incrementCounter atomicInteger: " + atomicInteger.get());
     }
 }

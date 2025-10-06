@@ -8,6 +8,7 @@ import static main.java.org.mzerek.solutions.javathreads_01.DelayUtils.delaySeco
 
 public class BlockingQueueExample {
 
+    //https://www.baeldung.com/java-blocking-queue
     public static void main(String[] args) {
         BlockingQueue<String> arrayBlockingQueue = new ArrayBlockingQueue<>(20);
         ResultBuffer resultBuffer = new ResultBuffer();
