@@ -1,6 +1,6 @@
 package main.java.org.mzerek.solutions.patterns_02.observer;
 
-public class NotificationTask implements Observer{
+public class NotificationTask implements Observer {
 
     @Override
     public void notification() {
