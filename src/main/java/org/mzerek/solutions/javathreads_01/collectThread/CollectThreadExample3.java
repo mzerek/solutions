@@ -3,6 +3,7 @@ package main.java.org.mzerek.solutions.javathreads_01.collectThread;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -15,6 +16,8 @@ public class CollectThreadExample3 {
         CollectThreadExample3 example = new CollectThreadExample3();
 
         long startTime = System.currentTimeMillis();
+
+        Predicate.isEqual(startTime);
 
         CompletableFuture<Integer> calc1 = CompletableFuture.supplyAsync(example::one);
         CompletableFuture<Integer> calc2 = CompletableFuture.supplyAsync(example::two);
@@ -39,6 +42,8 @@ public class CollectThreadExample3 {
 
     public int one() {
         delaySecond(1);
+
+
         return 1;
     }
 
